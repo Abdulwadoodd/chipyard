@@ -33,6 +33,7 @@ class DigitalTop(implicit p: Parameters) extends ChipyardSystem
   with nvidia.blocks.dla.CanHavePeripheryNVDLA // Enables optionally having an NVDLA
   with chipyard.clocking.HasChipyardPRCI // Use Chipyard reset/clock distribution
   with fftgenerator.CanHavePeripheryFFT // Enables optionally having an MMIO-based FFT block
+  with chipyard.example.CanHavePeripheryJustRead // Enable optionally Just Read peripheral
 {
   override lazy val module = new DigitalTopModule(this)
 }
@@ -47,4 +48,5 @@ class DigitalTopModule[+L <: DigitalTop](l: L) extends ChipyardSystemModule(l)
   with sifive.blocks.devices.spi.HasPeripherySPIModuleImp
   with chipyard.example.CanHavePeripheryGCDModuleImp
   with freechips.rocketchip.util.DontTouch
+  with chipyard.example.CanHavePeripheryJustReadModuleImp
 // DOC include end: DigitalTop

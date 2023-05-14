@@ -224,6 +224,11 @@ class LBWIFRocketConfig extends Config(
   new freechips.rocketchip.subsystem.WithNBigCores(1) ++
   new chipyard.config.AbstractConfig)
 
+class JustReadTLRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNBigCores(1) ++
+  new chipyard.example.WithJustRead ++ // Use our MMIO peripheral, connect TL
+  new chipyard.config.AbstractConfig)
+
 // DOC include start: MulticlockAXIOverSerialConfig
 class MulticlockAXIOverSerialConfig extends Config(
   new chipyard.config.WithSystemBusFrequencyAsDefault ++
