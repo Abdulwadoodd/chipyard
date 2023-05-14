@@ -104,6 +104,7 @@
 [submodule "generators/cva6"]
 	path = generators/cva6
 	url = https://github.com/ucb-bar/cva6-wrapper.git
+	ignore = dirty
 [submodule "tools/DRAMSim2"]
 	path = tools/DRAMSim2
 	url = https://github.com/firesim/DRAMSim2.git
@@ -125,6 +126,7 @@
 [submodule "tools/api-config-chipsalliance"]
 	path = tools/api-config-chipsalliance
 	url = https://github.com/chipsalliance/api-config-chipsalliance.git
+	ignore = dirty
 [submodule "tools/rocket-dsp-utils"]
 	path = tools/rocket-dsp-utils
 	url = https://github.com/ucb-bar/rocket-dsp-utils

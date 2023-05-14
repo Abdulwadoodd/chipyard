@@ -2,6 +2,7 @@ bootrom/*
 docs/warnings.txt
 /Makefrag.pkgs
 target
+.metals/
 *.jar
 *.stamp
 *.vcd
